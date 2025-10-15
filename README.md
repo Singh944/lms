@@ -19,20 +19,20 @@ A FastAPI-based system to manage books, users, and issue/return operations with 
 ```mermaid
 flowchart LR
   subgraph Client
-    Browser[Web Browser]
+    Browser["Web Browser"]
   end
 
-  subgraph FastAPI[FastAPI App]
-    Routes[Routes & Controllers]
-    Services[Domain Services]
-    Auth[Auth (JWT/Google SSO)]
-    Templates[Jinja2 Templates]
-    Models[SQLAlchemy Models]
+  subgraph FastAPI["FastAPI App"]
+    Routes["Routes and Controllers"]
+    Services["Domain Services"]
+    Auth["Auth (JWT and Google SSO)"]
+    Templates["Jinja2 Templates"]
+    Models["SQLAlchemy Models"]
   end
 
   subgraph Storage
-    DB[(SQLite/PostgreSQL)]
-    Files[(Static / Uploads)]
+    DB["Database: SQLite or PostgreSQL"]
+    Files["Static / Uploads"]
   end
 
   Browser -->|HTTP/HTTPS| Routes
